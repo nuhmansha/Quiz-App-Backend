@@ -6,7 +6,7 @@ const cors = require("cors");
 dotenv.config();
 
 const dbConnection = require("./config/db");
-const questionRouter = require("./Router/question");
+
 
 const app = express();
 const port = process.env.PORT || 3002;
@@ -22,7 +22,7 @@ app.use(
   })
 );
 
-app.use("/", questionRouter);
+
 
 dbConnection()
   .then(() => {
